@@ -1,6 +1,5 @@
-//import java.util.*;
 
-public class revision {
+public class mazePaths {
 
     public static boolean inRange(int i, int j, int [][] arr){
         int n = arr.length;
@@ -15,6 +14,17 @@ public class revision {
         if(i < 0 || i >= n || j < 0 || j >= m)
             return false;
         return true;
+    }
+
+    public static void mazePath(){
+        int n = 3;
+        int m = 4;
+        String [] dirN = {"H", "V", "D"};
+        int [][] dir = {{0,1}, {1,0}, {1,1}};
+
+        // int ans = mazePath_01(0,0,n-1,m-1,dir, dirN, "");
+        int ans = mazePath_02(0,0,n-1,m-1,dir, dirN, "");
+        System.out.println(ans);
     }
 
     // without jump
@@ -60,18 +70,6 @@ public class revision {
         }
         return count;
 
-    }
-
-
-    public static void mazePath(){
-        int n = 3;
-        int m = 4;
-        String [] dirN = {"H", "V", "D"};
-        int [][] dir = {{0,1}, {1,0}, {1,1}};
-
-        // int ans = mazePath_01(0,0,n-1,m-1,dir, dirN, "");
-        int ans = mazePath_02(0,0,n-1,m-1,dir, dirN, "");
-        System.out.println(ans);
     }
 
     public static void floodfill(){
@@ -165,6 +163,8 @@ public class revision {
 
     public static void main(String[] args) {
         //mazePath();
-        floodfill();
+        //uniquePath();
+        //uniquePathObstacle();
+        //floodfill();
     }
 }
