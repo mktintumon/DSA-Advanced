@@ -1,0 +1,39 @@
+class Tree
+{
+     static int maxDiagonal = 0 ; 
+     public static void dTraversal(Node root , int diagonal ,HashMap<Integer ,ArrayList<Integer>> map){
+        if(root == null) return ;
+        
+        if(diagonal > maxDiagonal){
+            maxDiagonal = diagonal;
+        }
+        
+         if(map.containsKey(diagonal) == false){
+            map.put(diagonal, new ArrayList<>());
+            map.get(diagonal).add(root.data);
+        } else {
+            map.get(diagonal).add(root.data);
+        }
+        
+        dTraversal(root.left , diagonal + 1 , map);
+        dTraversal(root.right , diagonal , map);
+     }
+    
+     public ArrayList<Integer> diagonal(Node root)
+      {
+           HashMap<Integer ,ArrayList<Integer>> map = new HashMap<>();
+           dTraversal(root , 0 , map);
+           
+           ArrayList<Integer> ans = new ArrayList<>();
+           
+           for(int d=0 ; d<=maxDiagonal ; d++){
+               ArrayList<Integer> list = map.get(d);
+               if(list == null) continue;
+               for(int item : list){
+                   ans.add(item);
+               }
+           }
+           
+           return ans;
+      }
+}
