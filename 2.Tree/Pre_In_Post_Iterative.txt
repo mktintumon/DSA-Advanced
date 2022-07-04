@@ -1,0 +1,55 @@
+import java.util.Stack;
+
+public class Pre_In_Post_Iterative {
+
+    public class Pair{
+        Node node;
+        int state;
+
+        Pair(Node node, int state){
+            this.node = node;
+            this.state = state;
+        }
+    }
+
+    public static void iterative(Node root){
+        String pre = "";
+        String in = "";
+        String post = "";
+
+        Stack<Pair> st = new Stack<>();
+        st.push(new Pair(root, 0));
+
+        while(st.size()>0){
+            Pair top = st.peek();
+
+            if(top.state == 0){
+                // PRE ORDER
+                pre += top.node.data + " ";
+                top.state++;
+
+                if(top.node.left != null){
+                    st.push(new Pair(top.node.left,0));
+                }
+            }
+            else if(top.state == 1){
+                // IN ORDER
+                in += top.node.data + " ";
+                top.state++;
+
+                if(top.node.right != null){
+                    st.push(new Pair(top.node.right,0));
+                }
+            }
+            else{
+                //POST ORDER
+                post += top.node.data + " ";
+                st.pop();
+            }   
+        }
+
+        System.out.println(pre);
+        System.out.println(in);
+        System.out.println(post);
+    }  
+}

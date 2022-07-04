@@ -1,6 +1,6 @@
 
  // Definition for a binary tree node.
-class Solution {
+class recoverBST {
     public static class TreeNode {
         int val;
         TreeNode left;
