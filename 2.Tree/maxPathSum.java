@@ -166,4 +166,31 @@ class maxPathSum{
     }
 
     
+    // LEAF TO LEAF MAX SUM 
+    int maximum; //  maximum l 2 l
+    public int maxPathSumLTL(Node root)
+    { 
+        maximum = Integer.MIN_VALUE;
+        helper(root);
+        return maximum;    
+    } 
+    
+    int helperLTL(Node node){
+      if(node.left != null && node.right != null){
+          int left = helperLTL(node.left);
+          int right = helperLTL(node.right);
+
+          max = Math.max(max, left + node.data + right);
+
+          return Math.max(left, right) + node.data;
+      } else if(node.left != null){
+          int left = helperLTL(node.left);
+          return node.data + left;
+      } else if(node.right != null){
+          int right = helperLTL(node.right);
+          return node.data + right;
+      } else {
+          return node.data;
+      }
+    }
 }
