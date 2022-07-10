@@ -1,4 +1,4 @@
-class Solution {
+class cloneTreeRandomPointer {
    class Tree{
         int data;
         Tree left,right,random;
