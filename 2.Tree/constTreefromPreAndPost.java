@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class constTreefromPreAndPost {
     public class TreeNode {
         int val;
