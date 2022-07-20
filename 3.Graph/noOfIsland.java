@@ -3,7 +3,7 @@ public class noOfIsland {
     
     static int[][] dir = {{-1,0},{0,-1},{1,0},{0,1}};
     
-    public int numIslands(char[][] grid) {
+    public int numIslands_01(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
         
@@ -33,25 +33,25 @@ public class noOfIsland {
             }
         }
     }
-}
+
 
 //    ************   APPROACH - 2 *************
 
-class Solution {
-    public int numIslands(char[][] grid) {
-        boolean[][] visited = new boolean[grid.length][grid[0].length];
+
+public int numIslands_02(char[][] grid) {
+    boolean[][] visited = new boolean[grid.length][grid[0].length];
         
-        int count = 0;
-        for(int i = 0; i < grid.length; i++){
-            for(int j = 0; j < grid[i].length; j++){
-                if(visited[i][j] == false && grid[i][j] == '1'){
-                    count++;
-                    traverse(grid, visited, i, j);
-                }
+    int count = 0;
+    for(int i = 0; i < grid.length; i++){
+        for(int j = 0; j < grid[i].length; j++){
+            if(visited[i][j] == false && grid[i][j] == '1'){
+                count++;
+                traverse(grid, visited, i, j);
             }
         }
+    }
         
-        return count;
+    return count;
     }
     
     public void traverse(char[][] grid, boolean[][] visited, int i, int j){
@@ -70,3 +70,4 @@ class Solution {
         traverse(grid, visited, i, j + 1);
     }
 }
+
