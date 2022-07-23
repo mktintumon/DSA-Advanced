@@ -1,4 +1,4 @@
-class Solution {
+class treeCameras {
 
     public class TreeNode {
         int data;
