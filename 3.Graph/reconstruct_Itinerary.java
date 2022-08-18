@@ -15,7 +15,7 @@ import java.util.*;
     
  */
 
-class Solution {
+class reconstruct_Itinerary {
     // lexical order of nbr -> need PQ
     HashMap<String, PriorityQueue<String>> map;
 
@@ -38,7 +38,7 @@ class Solution {
         }
 
         ArrayList<String> ans = new ArrayList<>();
-        dfs("JKF", ans);
+        dfs("JFK", ans);
         return ans;
     }
 
@@ -54,6 +54,7 @@ class Solution {
             dfs(newSrc, ans);
         }
 
+        //post-order working
         ans.add(0, v);
     }
 
