@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution{
+class targetDiffPair{
     public boolean findPair(int arr[], int size, int n){
         // n == target
         if(arr.length == 1) return false;

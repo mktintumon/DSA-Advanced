@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class targetSumPair {
     boolean hasArrayTwoCandidates(int arr[], int n, int x){
         Arrays.sort(arr);
         
