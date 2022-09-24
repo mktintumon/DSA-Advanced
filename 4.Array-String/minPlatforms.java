@@ -1,5 +1,7 @@
 import java.util.*;
 
+// MEETING ROOM 2 -> same code
+
 // find max no. of trains at a platform at particular time
 class minPlatforms{
     

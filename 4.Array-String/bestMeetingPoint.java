@@ -31,7 +31,7 @@ public class bestMeetingPoint{
         
         // calculate distance
         // finding the distance from median point
-        // uwe can use 2 different loops for finding the distance
+        // we can use 2 different loops for finding the distance
         // but Arraylists -->  length(x_cord) == length(y_cord) 
         int dist = 0;
         for(int i = 0; i < x_cord.size(); i++) {
