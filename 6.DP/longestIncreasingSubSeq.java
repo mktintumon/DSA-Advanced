@@ -51,4 +51,32 @@ class longestIncreasingSubSeq {
         
         return len;
     }
+
+    // our own binary search implementation
+    // used in the O(nlogn) approach
+    // if found gives the index of value
+    // if not found gives the idx,where to be inserted with -ve sign 
+    public int binarySearch(int[] arr, int lo, int hi, int val) {
+		int ans = -1;
+		int ans2 = -1;
+		while(lo <= hi) {
+			int mid = (lo + hi) / 2;
+			if(val == arr[mid]) {
+				ans = mid;
+				lo = mid + 1;
+			} else if(val < arr[mid]) {
+				hi = mid - 1;
+				ans2 = -(hi + 2);
+			} else {
+				lo = mid + 1;
+				ans2 = -(lo + 1);
+			}
+		}
+		
+		if(ans == -1) {
+			ans = ans2;
+		} 
+		
+		return ans;
+	}
 }
