@@ -1,5 +1,16 @@
 import java.util.*;
 
+/*
+  APPLICATIONS: 
+   1) count number of BST
+   2) count Brackets
+   3) count valleys and mountains
+   4) upper diagonal Maze travel
+   5) Dyck path / Dyck word
+   6) circles and non intersecting chords 
+   7) Triangulations
+*/
+
 class catlan{
     public static void main(String[] args) {
         catlanNum(10);
