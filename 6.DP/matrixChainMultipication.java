@@ -3,7 +3,7 @@ class matrixChainMultipication{
     static int matrixMultiplication(int N, int arr[]){
         int[][] dp = new int[arr.length-1][arr.length-1];
         
-        for(int gap = 0 ; gap < dp.length ; gap++){
+        for(int gap = 0 ; gap < dp[0].length ; gap++){
             for(int i=0 , j=gap ; j < dp[0].length ; i++ , j++){
                 if(gap == 0){
                     dp[i][j] = 0;
