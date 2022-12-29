@@ -13,6 +13,8 @@ class matrixChainMultipication{
                 }
                 else{
                     int min = Integer.MAX_VALUE;
+
+                    // k1 = right side k  and k2 = left side k
                     for(int k1=1 , k2=gap ; k1<=gap ; k1++ , k2--){
                         int left = dp[i][j-k2];   // dim[] = (arr[i] , arr[j-k2+1])
                         int right = dp[i+k1][j];  // dim[] = (arr[i+k1] , arr[j+1])
