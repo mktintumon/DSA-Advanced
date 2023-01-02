@@ -2,19 +2,20 @@ class matrixChainMultipication{
 
 
     /*
-     MCM PATTERN QUESTIONS
+    MCM PATTERN QUESTIONS
 
-     1) Min and Max value of expression
-     2) Optimal BST
-     3) Burst Balloons
-     4) Min score Triangulation of Polygon
-     5) Longest common substring
-     6) count of longest palindromic substring
-     7) longest palindromic substring
-     8) count of palindromic subsequences
-     9) palindromic partition - 2
-     10) longest palindromic subsequence
-     11) longest common Subsequence
+    1) Min and Max value of expression
+    2) Optimal BST
+    3) Burst Balloons
+    4) Min score Triangulation of Polygon
+    5) Longest common substring
+    6) count of longest palindromic substring
+    7) longest palindromic substring
+    8) count of palindromic subsequences
+    9) palindromic partition
+    10) palindromic partition - 2
+    11 longest palindromic subsequence
+    12) longest common Subsequence
      
     */
 
