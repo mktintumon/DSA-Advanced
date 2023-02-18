@@ -2,7 +2,7 @@ import java.util.*;
 
 // GFG
 
-class Solution{
+class dijkstraGFG{
     static class Pair{
         int v;
         int wt;
